@@ -351,4 +351,9 @@ Some gotchas we already know about:
 * GoLismero seems to run slower on Windows than on Linux or Mac. It appears to be related to the Python standard multiprocessing module and the lack of fork() support on Windows.
 * This is not a bug, just a reminder: GoLismero by default creates a new database file on each run! You can disable the database creation with the -nd switch.
 
-[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/bd520897a768ee38569775bdb8372b8a "githalytics.com")](http://githalytics.com/golismero/golismero)
+Docker
+------
+Currently, does not support openVAS and SpiderFoot
+```
+docker run --rm -ti -v ~/output/golismer:/opt/golismer/result:rw rabbotio/golismero scan http://example.com -o /opt/golismer/result/output.html
+```
